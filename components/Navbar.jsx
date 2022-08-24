@@ -7,7 +7,7 @@ import {FaGripLinesVertical} from 'react-icons/fa'
 
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(true)
+    const [toggleMenu, setToggleMenu] = useState(false)
     // useEffect(() => {
     //     load()
     // },[])
@@ -48,7 +48,7 @@ const Navbar = () => {
     </Container>
     {toggleMenu && (
         <ToggleMenuLinks>
-                <li onClick={() => setToggleMenu(!toggleMenu)}>Home</li>
+                <li onClick={() => setToggleMenu(!toggleMenu)}>Hom1e</li>
                 <li>Movies</li>
                 <li>Series</li>
                 <li>My List</li> 

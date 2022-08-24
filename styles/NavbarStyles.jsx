@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+color: white;
+position: fixed;
+top:0 ;
+z-index: 11;
     padding: 0px 50px;
     /* height: ${(props) => (props.toggleMenu ? "100vh" : "70px")}; */
     height: 70px;
     width: 100%;
-    background-color: #d3d3d3c3;
+    background: linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3)50%);
     display: flex;
     align-items:center ;
     justify-content: space-between;
@@ -47,6 +51,7 @@ export const TitleHeading = styled.div`
     font-weight: bold;
     font-size: 18px;
     padding-right: 10px;
+    font-size: 24px;
 `
 
 export const MenuLinks = styled.div`
@@ -69,6 +74,7 @@ export const RightMenuWrapper = styled.div`
 `
 export const InputWrapper = styled.div`
         input{
+            color: white;
             background-color: transparent;
             border: none;
             outline: none;
@@ -94,7 +100,8 @@ export const InputWrapper = styled.div`
 `
 
 export const SelectOptionsWrapper = styled.select`
-    background-color: transparent;
+color: white;
+    background-color: black;
 
     border: none;
 
