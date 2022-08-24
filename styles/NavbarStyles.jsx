@@ -9,7 +9,7 @@ z-index: 11;
     /* height: ${(props) => (props.toggleMenu ? "100vh" : "70px")}; */
     height: 70px;
     width: 100%;
-    background: linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3)50%);
+    background: ${ (props) => !props.scrolled? 'linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3)50%)' : '#06020ba5'};
     display: flex;
     align-items:center ;
     justify-content: space-between;
@@ -101,11 +101,16 @@ export const InputWrapper = styled.div`
 
 export const SelectOptionsWrapper = styled.select`
 color: white;
-    background-color: black;
+    background-color: transparent;
 
     border: none;
 
+    option{
+        background-color: black;
+    }
+
     @media only screen and (max-width: 700px){
+            font-size: 12px;
               margin: 0;
               padding: 0;
             }
