@@ -4,6 +4,7 @@ import {BsSearch} from 'react-icons/bs'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {FaGripLinesVertical} from 'react-icons/fa'
 import { GlobalState } from '../pages/_app'
+import Link from 'next/link'
 
 
 const Navbar = () => {
@@ -26,10 +27,10 @@ const Navbar = () => {
             <HamburgerMenuButton onClick={() => setToggleMenu(!toggleMenu)}>{toggleMenu? <FaGripLinesVertical /> :<GiHamburgerMenu />}</HamburgerMenuButton>
             <MenuLinks>
          
-                <li>Home</li>
-                <li>Movies</li>
-                <li>Series</li>
-                <li>My List</li>
+                <li><Link href='/'>Home</Link></li>
+                <li><Link href='/Movies'>Movies</Link></li>
+                <li><Link href='/Series'>Series</Link></li>
+                <li><Link href='/MyList'>My List</Link></li>
             </MenuLinks>
         </MenuHeadingWrapper>
         <RightMenuWrapper>
@@ -42,16 +43,16 @@ const Navbar = () => {
         <option value="Adult">Adult</option>
         <option value="Children">Children</option>
     </SelectOptionsWrapper>
-    <li>Register</li>
+    <li><Link href='/Register'>Register</Link></li>
     
         </RightMenuWrapper>
     </Container>
     {toggleMenu && (
         <ToggleMenuLinks>
-                <li onClick={() => setToggleMenu(!toggleMenu)}>Hom1e</li>
-                <li>Movies</li>
-                <li>Series</li>
-                <li>My List</li> 
+               <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/'>Home</Link></li>
+                <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/Movies'>Movies</Link></li>
+                <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/Series'>Series</Link></li>
+                <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/MyList'>My List</Link></li>
         </ToggleMenuLinks>
     )}
     </div>
