@@ -13,7 +13,7 @@ const Banner = () => {
     },[])
 
     const loadBanner = async () => {
-        const response = await fetch(requestMovies.fetchTrending)
+        const response = await fetch(requestMovies.fetchTopRated)
         const data = await response.json()
         setBannerMovie(data.results[Math.floor(Math.random()* data.results.length)])
      }
