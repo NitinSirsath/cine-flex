@@ -21,3 +21,26 @@ export const Container = styled.div`
   }
   }
 `;
+
+// export ButtonWrapper = styled.di
+
+export const Button = styled.button`
+    cursor: pointer;
+    padding: 10px 17px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(239, 233, 233, 1.714);
+    font-weight: bold;
+
+    &:hover{
+        background-color: rgba(239, 233, 233, 0.814);
+    }
+
+    @media only screen and (max-width: 700px) {
+   padding: 8px 10px;
+   
+  }
+`
+
+

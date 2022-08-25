@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import Img from '../public/img.jpg'
-import { Container } from '../styles/Banner.style'
+import { Container ,Button} from '../styles/Banner.style'
 import {requestMovies, requestGenre } from '../requests'
+import infoLogo from '../public/information.png'
+import playLogo from '../public/play.png'
+
 
 
 const Banner = () => {
@@ -37,7 +40,10 @@ const Banner = () => {
     <Container color={'white'} image={`https://image.tmdb.org/t/p/original/${bannerMovie?.backdrop_path}`}>
       <h1>{bannerMovie?.name || bannerMovie?.title || bannerMovie?.original_name}</h1>
       <p>{bannerMovie?.overview}</p>
-      <p></p>
+        <div>
+            <Button> &#9654;  Play</Button>
+            <Button>&#128712; Info</Button>
+        </div>
     </Container>
   )
 }
