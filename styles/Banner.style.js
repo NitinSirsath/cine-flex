@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-
-min-height: 100vh;
+background-image: url(${props => props.image.src});
 color: white;
-/* padding-top: 100px; */
 `

@@ -1,16 +1,27 @@
-import Navbar from '../components/Navbar'
-import '../styles/globals.css'
-import dynamic from 'next/dynamic'
+import Navbar from "../components/Navbar";
+import "../styles/globals.css";
+import { createContext } from "react";
+import { useState } from "react";
 
-export const NavbarWithNoSSR = dynamic(() => import('../components/Navbar'), {
-  ssr: false,
-})
+export const GlobalState = createContext();
+
+// export const NavbarWithNoSSR = dynamic(() => import('../components/Navbar'), {
+//   ssr: false,
+// })
 
 function MyApp({ Component, pageProps }) {
-  return <div>
-    <NavbarWithNoSSR />
-    <Component {...pageProps} />
-  </div>
+ 
+
+  const value = {
+   
+  };
+
+  return (
+    <GlobalState.Provider value={value}>
+      <Navbar />
+      <Component {...pageProps} />
+    </GlobalState.Provider>
+  );
 }
 
-export default MyApp
+export default MyApp;
