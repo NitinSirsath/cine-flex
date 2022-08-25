@@ -3,6 +3,7 @@ import Img from '../public/img.jpg'
 import { Container } from '../styles/Banner.style'
 import {requestMovies } from '../requests'
 
+
 const Banner = () => {
 
     const [bannerMovie, setBannerMovie] = useState([])
@@ -16,10 +17,11 @@ const Banner = () => {
         const data = await response.json()
         setBannerMovie(data.results[Math.floor(Math.random()* data.results.length)])
      }
-     console.log(bannerMovie);
+     console.log(bannerMovie?.backdrop_path);
   return (
-    <Container image={Img}>
-      baner  
+    <Container image={`https://image.tmdb.org/t/p/original/${bannerMovie?.backdrop_path}`}>
+      
+      hhsfhd
     </Container>
   )
 }
