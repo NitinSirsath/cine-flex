@@ -16,3 +16,8 @@ export const requestSeries = {
     fetchAiringToday : `https://api.themoviedb.org/3/tv/airing_today?api_key=${API_KEY}&language=en-US&page=1`,
     fetchLatest : `https://api.themoviedb.org/3/tv/latest?api_key=${API_KEY}&language=en-US`
 }
+
+export const requestGenre ={
+  fetchGerne : `
+  https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`
+}

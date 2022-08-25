@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  color: white;
+  color: ${(props) => props.color};
   position: fixed;
   top: 0;
   z-index: 11;
@@ -97,7 +97,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const SelectOptionsWrapper = styled.select`
-  color: white;
+ color: ${(props) => props.color};
   background-color: transparent;
 
   border: none;
@@ -117,7 +117,7 @@ export const ToggleMenuLinks = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: ${(props) => props.color};
   align-items: flex-end;
   background-color: #00000047;
   padding: 0 20px;

@@ -21,7 +21,7 @@ const Navbar = () => {
   
   return (
     <div>
-        <Container scrolled={scrolled} toggleMenu={toggleMenu}>
+        <Container color={'white'} scrolled={scrolled} toggleMenu={toggleMenu}>
         <MenuHeadingWrapper >
             <TitleHeading>CINEFLEX</TitleHeading>
             <HamburgerMenuButton onClick={() => setToggleMenu(!toggleMenu)}>{toggleMenu? <FaGripLinesVertical /> :<GiHamburgerMenu />}</HamburgerMenuButton>
@@ -38,7 +38,7 @@ const Navbar = () => {
             <input type="text" placeholder='Search' />
             <button><BsSearch /></button>
             </InputWrapper>
-            <SelectOptionsWrapper>
+            <SelectOptionsWrapper color={'white'}>
         <option value="All">All</option>
         <option value="Adult">Adult</option>
         <option value="Children">Children</option>
@@ -48,7 +48,7 @@ const Navbar = () => {
         </RightMenuWrapper>
     </Container>
     {toggleMenu && (
-        <ToggleMenuLinks>
+        <ToggleMenuLinks color={'white'}>
                <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/'>Home</Link></li>
                 <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/Movies'>Movies</Link></li>
                 <li onClick={() => setToggleMenu( preV => !preV )}><Link href='/Series'>Series</Link></li>
