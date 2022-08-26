@@ -17,8 +17,8 @@ export default function Home() {
       </Head>
     <Container color={'white'}>
       <Banner />
-      <Row  title={'Top Trending'} fetchURL={requestMovies.fetchTrending}/>
-      <Row  title={'Latest Series'} fetchURL={requestSeries.fetchLatest}/>
+      <Row  title={'Top Trending'} fetchURL={requestMovies?.fetchTrending}/>
+      {/* <Row  title={'Latest Series'} fetchURL={requestSeries?.fetchLatest}/> */}
       <Row  title={'Most Popolar'} fetchURL={requestMovies.fetchPopular}/>
       <Row  title={'Top Rated'} fetchURL={requestMovies.fetchTopRated}/>
       <Row  title={'Airing Today'} fetchURL={requestSeries.fetchAiringToday}/>

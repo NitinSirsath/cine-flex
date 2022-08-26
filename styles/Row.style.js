@@ -4,6 +4,8 @@ export const Container = styled.div `
  padding: 5px 50px;
     overflow-y: hidden;
     overflow-x: scroll;
+    scroll-behavior: auto;
+    /* scrollbar-width: none;  */
 `
 
 export const TitleHeading = styled.h2 `
