@@ -23,7 +23,7 @@ const Navbar = () => {
     <div>
         <Container color={'white'} scrolled={scrolled} toggleMenu={toggleMenu}>
         <MenuHeadingWrapper >
-            <TitleHeading>CINEFLEX</TitleHeading>
+            <TitleHeading><Link href='/'>CINEFLEX</Link></TitleHeading>
             <HamburgerMenuButton onClick={() => setToggleMenu(!toggleMenu)}>{toggleMenu? <FaGripLinesVertical /> :<GiHamburgerMenu />}</HamburgerMenuButton>
             <MenuLinks>
          

@@ -10,11 +10,11 @@ import playLogo from '../public/play.png'
 const Banner = () => {
 
     const [bannerMovie, setBannerMovie] = useState([])
-    // const [showGenre, setShowGenre] = useState([])
+    const [showGenre, setShowGenre] = useState([])
 
     useEffect(() => {
         loadBanner()
-        // loadGenre()
+        loadGenre()
     },[])
 
     const loadBanner = async () => {
@@ -22,17 +22,46 @@ const Banner = () => {
         const data = await response.json()
         setBannerMovie(data.results[Math.floor(Math.random()* data.results.length)])
      }
+     
+     const genreId = bannerMovie.genre_ids
 
-    //  const loadGenre = async () => {
-    //     const response = await fetch(requestGenre.fetchGerne)
-    //     const data = await response.json()
-    //     const getGenre = data.genres?.filter((item) => {
-    //         return item === bannerMovie?.genre_ids[1]
-    //     })
-    //     setShowGenre(getGenre)
-    //     // console.log(data.genres);
+     const loadGenre = async () => {
+        const response = await fetch(requestGenre.fetchGerne)
+        const data = await response.json()
+        setShowGenre(data.genres)
+        
+    }
+
+    const getGenre1 = showGenre.filter((item) => {
+        return item.id === genreId[0]
+       })
+    const getGenre2 = showGenre.filter((item) => {
+        return item.id === genreId[1]
+       })
+
+       const gerne = [...getGenre1,...getGenre2]
+      
+     
+
+    //  const getAllGenre =  (arr) => {
+    //     const result = Object.entries(arr)
+    //     for (let i = 0; i < result.length; i++) {
+    //         const element = arr[i];
+    //         return element
+    //     }
     //  }
-    //  console.log(showGenre,'genre');
+    //  const result = getAllGenre(genreId)
+    //  console.log(result);
+
+    
+       
+        
+    //  const getGenre = genreId.map((element) => {
+    //         showGenre.filter((item) => {
+    //             return element.id ===item.id
+    //         })
+    //  })
+     
 
      
     
@@ -40,9 +69,10 @@ const Banner = () => {
     <Container color={'white'} image={`https://image.tmdb.org/t/p/original/${bannerMovie?.backdrop_path}`}>
       <h1>{bannerMovie?.name || bannerMovie?.title || bannerMovie?.original_name}</h1>
       <p>{bannerMovie?.overview}</p>
+      <p>{gerne.map(element => <span key={element.id}>{element.name}</span>)}</p>
         <div>
-            <Button> &#9654;  Play</Button>
-            <Button>&#128712; Info</Button>
+            <Button> &#9654;   Play</Button>
+            <Button>&#8505;  Info</Button>
         </div>
     </Container>
   )
