@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div `
  padding: 5px 50px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scroll-behavior: auto;
+    
     /* scrollbar-width: none;  */
 `
 
@@ -15,6 +13,9 @@ export const TitleHeading = styled.h2 `
 export const MovieCardWrapper = styled.div `
 display: flex;
 width: max-content;
+overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: auto;
 `
 
 export const CardContainer = styled.div`
