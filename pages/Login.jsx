@@ -20,7 +20,7 @@ const Login = () => {
                <p>Need help?</p>
             </HelpSectionWrapper>
             <SingUpWrapper>
-                <p>New to Netflix? <span><Link href='/Register'>Sign Up</Link></span></p>
+                <p>New to CineFlex? <span><Link href='/Register'>Sign Up</Link></span></p>
                 <GoogleWarning>This page is protected by Google reCAPTCHA to ensure you&#39;re not a bot. <span>Learn more.</span></GoogleWarning>
             </SingUpWrapper>
         </ContentWrapper>
