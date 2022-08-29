@@ -15,15 +15,26 @@ background-image: linear-gradient(0deg,rgba(1,2,1,1) 0,transparent 60%,rgba(0,0,
 export const ContentWrapper = styled.div`
 width: 55%;
 text-align:center ;
+@media only screen and (max-width:700px){
+     width: 100%;
+     padding: 20px;
+    }
 
 h1{
         font-size: 4.2rem;
         margin:0 ;
+        @media only screen and (max-width:700px){
+            font-size:2.1rem ;
     }
+}
 
-    h3{
-        font-weight: 400;
-        font-size: 1.6rem;
+h3{
+    font-weight: 400;
+    font-size: 1.6rem;
+    @media only screen and (max-width:700px){
+        font-size:1.6rem ;
+    }
+      
     }
 
     p{
@@ -36,6 +47,7 @@ h1{
             input{
                 padding: 19px 16px;
                 width: 67%;
+             
             }
         
             button{

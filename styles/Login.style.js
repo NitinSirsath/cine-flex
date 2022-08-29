@@ -15,6 +15,11 @@ export const ContentWrapper = styled.div`
     height: 80%;
     background-color: rgba(0, 0, 0, 0.679);
     padding: 100px 50px;
+
+    @media only screen and (max-width:700px){
+        width: 90%;
+        padding: 70px 25px;
+    }
     
 `
 export const InputFieldWrapper = styled.div`
