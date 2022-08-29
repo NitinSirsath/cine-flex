@@ -5,4 +5,13 @@ export const Container = styled.div`
      color: ${(props) => props.color};
      padding: 100px 50px 50px;
       
+      @media only screen and (max-width:700px){
+        padding: 100px 10px 10px;
+      }
+
+      h1{
+        @media only screen and (max-width:700px) {
+            text-align: center;
+        }
+      }
 `

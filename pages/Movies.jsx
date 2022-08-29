@@ -10,6 +10,8 @@ const Movies = () => {
         <div>
             <Row fetchURL={requestMovies.fetchUpcoming} title={"TOP UPCOMING"}/>
             <Row fetchURL={requestMovies.fetchPopular} title={"TOP LATEST"}/>
+            <Row fetchURL={requestMovies.fetchTrending} title={"TOP TRENDING"}/>
+            <Row fetchURL={requestMovies.fetchTopRated} title={"TOP RATED"}/>
         </div>
     </Container>
   ) 
