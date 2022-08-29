@@ -2,7 +2,7 @@ import styled from "styled-components";
 // RGBA(16,9,9,0.16)
 
 export const Container = styled.div`
-  background-image: radial-gradient(rgba(16, 9, 9, 0.16), rgba(16, 9, 9, 0.86)),
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),
     url(${(props) => props.image});
   color: ${(props) => props.color};
   background-size: cover;
