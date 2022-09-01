@@ -20,25 +20,31 @@ body::-webkit-scrollbar {
   
               /* width of the entire scrollbar */
 }
-body::-webkit-scrollbar:horizontal {
-  width: 8px;               /* width of the entire scrollbar */
-}
+
 
 body::-webkit-scrollbar-track {
   background: rgb(30, 30, 29);        /* color of the tracking area */
 }
-body::-webkit-scrollbar-track:horizontal {
-  background: rgb(30, 30, 29);        /* color of the tracking area */
-}
+
 
 body::-webkit-scrollbar-thumb {
   background-color: rgb(181, 178, 178);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid rgb(39, 39, 39);  /* creates padding around scroll thumb */
 }
-body::-webkit-scrollbar-thumb:horizontal {
-  background-color: rgb(181, 178, 178);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid rgb(39, 39, 39);  /* creates padding around scroll thumb */
+
+::-webkit-scrollbar {
+  height: 8px;
+  overflow: visible;
+  width: 8px;
 }
 
+/* body::-webkit-scrollbar:horizontal{
+  height: 4px;
+  width: 4px;
+  background: gray;
+}
+body::-webkit-scrollbar-thumb:horizontal{
+  background: #000;
+  border-radius: 10px;
+} */

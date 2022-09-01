@@ -10,10 +10,15 @@ export const GlobalState = createContext();
 // })
 
 function MyApp({ Component, pageProps }) {
- 
+  
+  const [movies, setMovies] = useState([])
+  const [allMovies, setAllMovies] = useState([])
 
   const value = {
-   
+    movies,
+    setMovies,
+    allMovies,
+    setAllMovies
   };
 
   return (

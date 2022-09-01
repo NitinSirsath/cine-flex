@@ -71,12 +71,18 @@ export const RightMenuWrapper = styled.div`
   display: flex;
 `;
 export const InputWrapper = styled.div`
+
   input {
     color: white;
     background-color: transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid lightgray;
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fdfbfb;
+  opacity: 1; /* Firefox */
+}
 
     @media only screen and (max-width: 700px) {
       width: 80%;
