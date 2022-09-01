@@ -10,14 +10,7 @@ const Movies = () => {
     // const [contentType, setContentType] = useState('')
 
 
-    // useEffect(() => {
-
-    // }, [typeChange])
-    // const typeChange = useCallback(() => {
-    // }, [])
-    // console.log(contentType,'ContentType log');
-
-
+  
     return (
         <Container color={'white'}>
             <h1>MOVIES</h1>
