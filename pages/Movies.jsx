@@ -6,16 +6,16 @@ import { GlobalState } from './_app'
 import { useContext } from 'react'
 
 const Movies = () => {
-    const { allMovies, setAllMovies } = useContext(GlobalState)
-    const [contentType, setContentType] = useState('')
+    // const { allMovies, setAllMovies } = useContext(GlobalState)
+    // const [contentType, setContentType] = useState('')
 
-    useEffect(() => {
 
-    }, [typeChange])
+    // useEffect(() => {
 
-    const typeChange = useCallback(() => {
-    }, [])
-    console.log(contentType,'ContentType log');
+    // }, [typeChange])
+    // const typeChange = useCallback(() => {
+    // }, [])
+    // console.log(contentType,'ContentType log');
 
 
     return (
