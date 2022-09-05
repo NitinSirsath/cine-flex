@@ -24,11 +24,21 @@ width: max-content;
 `
 
 export const CardContainer = styled.div`
-    margin-right: 6px;
+    margin-right: 10px;
         /* object-fit: contain; */
+
+        transition: 500ms;
+
+        &:hover{
+            transform: scale(1.08);
+            /* margin-right: 20px; */
+        }
+
 `
 
 export const ImageCard = styled(Image)`
+
+
 
 @media only screen and (max-width: 700px){
         width: 135px;

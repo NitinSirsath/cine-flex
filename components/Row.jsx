@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { GlobalState } from "../pages/_app";
+import Link from 'next/link'
 
 import {
   Container,
@@ -37,13 +38,16 @@ const Row = ({ title, fetchURL }) => {
         {movies.map((movie) => {
           return (
             <CardContainer key={movie.id}>
+              <Link href={'/' + movie.id}>
               <ImageCard
                 src={`${base_URL}${movie?.poster_path}`}
                 alt={movie?.title}
                 height={280}
                 width={225}
               />
+
               {/* <CardImage background={`${base_URL}${movie?.poster_path}`}>helo</CardImage> */}
+              </Link>
             </CardContainer>
           );
         })}
